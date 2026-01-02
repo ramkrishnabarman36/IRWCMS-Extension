@@ -1,4 +1,6 @@
 <!-- profile.html (MV3 SAFE) -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
 <div style="display:flex; justify-content:center; margin:10px auto; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
   <div style="width:368px;">
 
@@ -35,6 +37,7 @@
         margin-top:14px;
       }
 
+      /* COLORFUL ICON BACKGROUND */
       .social-icons a {
         width:28px;
         height:28px;
@@ -42,13 +45,22 @@
         display:inline-flex;
         align-items:center;
         justify-content:center;
-        background:#444;
+
+        background:#ffffff; /* light base so colors pop */
+        box-shadow:0 1px 4px rgba(0,0,0,0.25);
+        transition:transform 0.15s ease, box-shadow 0.15s ease;
       }
 
+      .social-icons a:hover {
+        transform:scale(1.12);
+        box-shadow:0 3px 8px rgba(0,0,0,0.35);
+      }
+
+      /* IMPORTANT: keep original SVG colors */
       .social-icons img {
         width:16px;
         height:16px;
-        filter:brightness(0) invert(1);
+        filter:none;
       }
     </style>
 
@@ -59,7 +71,6 @@
       </p>
 
       <div class="profile-img">
-        <!-- LOCAL IMAGE ONLY -->
         <img src="assets/hero-bg1.svg" alt="Profile">
       </div>
 
